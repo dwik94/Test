@@ -1,4 +1,4 @@
-package com.dennis;
+package com.dennis.oop;
 
 public class Human extends Animal {
     String gender;

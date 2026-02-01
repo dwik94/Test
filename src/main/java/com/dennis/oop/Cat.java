@@ -1,4 +1,4 @@
-package com.dennis;
+package com.dennis.oop;
 
 public class Cat extends Animal {
     String race;

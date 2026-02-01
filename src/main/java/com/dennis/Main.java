@@ -1,25 +1,30 @@
 package com.dennis;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import com.dennis.access.Film;
 
 public class Main {
     void main() {
 
-        Animal person_1 = new Human("Dennis", 31, "1994", "male");
-        Animal cat_1 = new Cat("Silver", 6, "2020", "Huskatt");
+        Film film = new Film("Titanic", 1997, false);
 
-        List<Animal> animals = new ArrayList<>();
-        animals.add(person_1);
-        animals.add(cat_1);
+      Film film2 = new Film("Titanic", 1997, false);
 
-        for (Animal animal : animals) {
-            animal.eat();
-            IO.println(animal.name);
-            if (animal instanceof Cat P){
-                IO.println(P.race);
-            }
-        }
+      IO.println(film == film2);
+
+//      String a = "He";
+//      a+="j";
+//      String b = "He";
+//      b+="j";
+//    IO.println(b);
+//        IO.println(a);
+//      IO.println(a==b);
+//
+//      IO.println(a.equals(b));
+
+        int x = 3;
+        int y = 2;
+
+        IO.println(y+1==x);
+
     }
 }
