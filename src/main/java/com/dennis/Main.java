@@ -3,30 +3,37 @@
 package com.dennis;
 
 import com.dennis.access.Film;
+import com.dennis.exception.DuKanInteDelaMedNoll;
+import com.dennis.exception.Math;
 
 public class Main {
-    void main() {
+    void main() throws DuKanInteDelaMedNoll {
 
-        Film film = new Film("Titanic", 1997, false);
+        Math.divide(6,3);
 
-      Film film2 = new Film("Titanic", 1997, false);
+        try {
+            IO.print("Skriv ett tal: ");
+            int tal_1 = Integer.parseInt(IO.readln());
+            IO.print("Skriv in ett nytt tal: ");
+            int tal_2 = Integer.parseInt(IO.readln());
+            IO.println("tal_1 + tal_2 = " + Math.divide(tal_1,tal_2));
 
-      IO.println(film == film2);
+        }
 
-//      String a = "He";
-//      a+="j";
-//      String b = "He";
-//      b+="j";
-//    IO.println(b);
-//        IO.println(a);
-//      IO.println(a==b);
-//
-//      IO.println(a.equals(b));
+            catch (ArithmeticException e) {
+                IO.println("Du kan inte dela med 0");
+        }
 
-        int x = 3;
-        int y = 2;
+            catch (NumberFormatException e){
+                IO.println("Bara heltal!");
+        }
 
-        IO.println(y+1==x);
+            catch (DuKanInteDelaMedNoll e){
+                IO.println(e.getMessage());
+            }
 
+//            catch(Exception e){
+//            IO.println("Nåt gick åt skogen");
+//        }
     }
 }
